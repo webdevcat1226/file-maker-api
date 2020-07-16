@@ -91,10 +91,6 @@ export class AuthService {
     const curTokenPair = this.arrRefreshTokens.find(
       element => element.token === token,
     );
-    if (curTokenPair) {
-      return true;
-    } else {
-      return false;
-    }
+    return !!curTokenPair;
   }
 }
